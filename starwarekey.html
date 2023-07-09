@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function generateRandomText() {
+      var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      var randomText = '';
+      
+      for (var i = 0; i < 11; i++) {
+        var randomIndex = Math.floor(Math.random() * characters.length);
+        randomText += characters.charAt(randomIndex);
+      }
+      
+      document.getElementById('random-text').textContent = randomText;
+    }
+  </script>
+</head>
+<body onload="generateRandomText()">
+  <p><span id="random-text"></span></p>
+</body>
+</html>
